@@ -85,7 +85,7 @@
 		},
 		{
 			"name": "Debug External Libraries",
-			"type": "cppvsdbg",
+			"type": "node",
 			"request": "launch",
 			"program": "${command:dreammaker.returnDreamDaemonPath}",
 			"cwd": "${workspaceRoot}",
@@ -94,7 +94,7 @@
 		},
 		{
 			"name": "Debug External Libraries (low memory mode)",
-			"type": "cppvsdbg",
+			"type": "node",
 			"request": "launch",
 			"program": "${command:dreammaker.returnDreamDaemonPath}",
 			"cwd": "${workspaceRoot}",
@@ -102,11 +102,11 @@
 			"preLaunchTask": "Build All (low memory mode)"
 		},
 		{
-			"type": "opendream",
+			"type": "node",
 			"request": "launch",
 			"name": "Launch OpenDream (requires extension, 64 bit rustg, and an SS14 account)",
 			"preLaunchTask": "OpenDream: compile ${command:CurrentDME}",
-			"json_path": "${workspaceFolder}/${command:CurrentJson}"
+			"program": "${workspaceFolder}/${command:CurrentJson}"
 		}
 	]
 }
